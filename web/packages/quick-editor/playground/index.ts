@@ -3,6 +3,10 @@
 import { GravatarQuickEditor, GravatarQuickEditorCore } from '../dist';
 // @ts-ignore
 import type { ProfileUpdatedType } from '../dist';
+import { inject } from '@vercel/analytics';
+
+// Initialize Vercel Web Analytics
+inject();
 
 document.addEventListener( 'DOMContentLoaded', () => {
 	const closeButton = document.querySelector( '#edit-avatar-core-close' ) as HTMLButtonElement | null;
